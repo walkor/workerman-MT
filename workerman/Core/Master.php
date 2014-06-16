@@ -314,8 +314,9 @@ class Master
                 self::$threads->$worker_name = new \Stackable();
             }
     
-            while(count(self::$threads->$worker_name) < 1)
+            while(count(self::$threads->$worker_name) < $config['start_workers'])
             {
+                echo "forkOneWorker($worker_name)"; 
                 $thread = self::forkOneWorker($worker_name);
                 $thread_id = $thread->getThreadId();
                 self::$threads->$worker_name->$thread_id = $thread;
@@ -402,6 +403,20 @@ class Master
         while(1)
         {
             sleep(1);
+            foreach(self::$threads as $worker_name => $threads)
+            {
+                //var_dump(self::$threads);
+                foreach($threads as $thread_id => $thread)
+                {
+                    if($thread->isTerminated())
+                    {
+                        echo "isTerminated\n";
+                        $thread->join();
+                        unset(self::$threads[$worker_name]->$thread_id);
+                        self::createWorkers();
+                    }
+                }
+            }
             // 初始化任务系统
             Lib\Task::tick();
             // 检查是否有进程退出

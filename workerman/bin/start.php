@@ -16,11 +16,6 @@ define('WORKERMAN_ROOT_DIR', realpath(__DIR__."/../")."/");
 
 chdir(WORKERMAN_ROOT_DIR);
 
-if(0 === strpos('win', strtolower(PHP_OS)))
-{
-    exit("Workerman can not run on Windows operating system\n");
-}
-
 if (!version_compare(PHP_VERSION, '5.3.0', '>='))
 {
     exit("Workerman PHP >= 5.3.0 required \n");

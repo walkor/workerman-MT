@@ -71,13 +71,12 @@ class Select implements BaseEvent
      */
     public function __construct()
     {
-        /* $this->channel = stream_socket_pair(STREAM_PF_INET, STREAM_SOCK_STREAM, STREAM_IPPROTO_IP);
+         $this->channel = stream_socket_pair(STREAM_PF_INET, STREAM_SOCK_STREAM, STREAM_IPPROTO_IP);
         if($this->channel)
         {
             stream_set_blocking($this->channel[0], 0);
             $this->readFds[0] = $this->channel[0];
         }
-        fclose($this->channel[0]); */
     }
    
     /**
@@ -163,6 +162,7 @@ class Select implements BaseEvent
             $read = $this->readFds;
             //usleep(200000);
             $write = $this->writeFds;
+         
             // stream_select false：出错 0：超时
             if(!($ret = stream_select($read, $write, $e, 1)))
             {

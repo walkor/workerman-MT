@@ -33,15 +33,7 @@ class Task
      */
     public static function init($event = null)
     {
-        pcntl_alarm(1);
-        if($event)
-        {
-            $event->add(SIGALRM, \Man\Core\Events\BaseEvent::EV_SIGNAL, array('\Man\Core\Lib\Task', 'signalHandle'));
-        }
-        else 
-        {
-            pcntl_signal(SIGALRM, array('\Man\Core\Lib\Task', 'signalHandle'), false);
-        }
+        
     }
     
     /**
@@ -51,7 +43,6 @@ class Task
     public static function signalHandle()
     {
         self::tick();
-        pcntl_alarm(1);
     }
     
     

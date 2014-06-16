@@ -248,14 +248,13 @@ abstract class SocketWorker extends AbstractWorker
         if($this->workerStatus != self::STATUS_SHUTDOWN)
         {
             // 停止接收连接
-            $this->event->del($this->mainSocket, Events\BaseEvent::EV_READ);
-            fclose($this->mainSocket);
             $this->workerStatus = self::STATUS_SHUTDOWN;
         }
         
         // 没有链接要处理了
         if($this->allTaskHasDone())
         {
+            echo 'nani';
             exit(0);
         }
     }
@@ -297,8 +296,7 @@ abstract class SocketWorker extends AbstractWorker
     public function accept($socket, $null_one = null, $null_two = null)
     {
         // 获得一个连接
-        $new_connection = stream_socket_accept($socket, 0);
-        var_dump($new_connection);
+        $new_connection = @stream_socket_accept($socket, 0);
         // 可能是惊群效应
         if(false === $new_connection)
         {
@@ -436,8 +434,6 @@ abstract class SocketWorker extends AbstractWorker
         {
             // 停止服务
             $this->stop();
-            // EXIT_WAIT_TIME秒后退出进程
-            pcntl_alarm(self::EXIT_WAIT_TIME);
         }
     }
     

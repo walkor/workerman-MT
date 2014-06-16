@@ -1,4 +1,4 @@
 .buildpath
 .project
 .settings/org.eclipse.php.core.prefs
-workerman/bin/logs/2014-05-22/server.log
+workerman/logs
