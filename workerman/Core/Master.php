@@ -316,7 +316,6 @@ class Master
     
             while(count(self::$threads->$worker_name) < $config['start_workers'])
             {
-                echo "forkOneWorker($worker_name)"; 
                 $thread = self::forkOneWorker($worker_name);
                 $thread_id = $thread->getThreadId();
                 self::$threads->$worker_name->$thread_id = $thread;
@@ -402,7 +401,7 @@ class Master
         $siginfo = array();
         while(1)
         {
-            sleep(1);
+            usleep(100000);
             foreach(self::$threads as $worker_name => $threads)
             {
                 //var_dump(self::$threads);
@@ -410,7 +409,7 @@ class Master
                 {
                     if($thread->isTerminated())
                     {
-                        echo "isTerminated\n";
+                        //echo "isTerminated\n";
                         $thread->join();
                         unset(self::$threads[$worker_name]->$thread_id);
                         self::createWorkers();

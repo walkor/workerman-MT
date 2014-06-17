@@ -254,7 +254,6 @@ abstract class SocketWorker extends AbstractWorker
         // 没有链接要处理了
         if($this->allTaskHasDone())
         {
-            echo 'nani';
             exit(0);
         }
     }
