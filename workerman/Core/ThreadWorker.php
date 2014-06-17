@@ -26,6 +26,7 @@ class ThreadWorker extends \Thread
     {
         //require_once WORKERMAN_ROOT_DIR . '../applications/EchoWorker/EchoWorker.php';
         //$class_name = 'EchoWorker';
+        chdir(WORKERMAN_ROOT_DIR);
         require_once $this->workerFile;
         $worker = new $this->className($this->serviceName);
         
