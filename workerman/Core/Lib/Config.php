@@ -3,7 +3,7 @@ namespace Man\Core\Lib;
 /**
  * 
  * 配置
- * @author walkor
+ * @author walkor<walkor@workerman.net>
  *
  */
 class Config
@@ -110,6 +110,7 @@ class Config
     public static function reload()
     {
         self::$instances = null;
+        self::instance();
     }
     
 }
