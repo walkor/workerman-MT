@@ -4,7 +4,7 @@ workerman-for-win
 workerman windows 版本
 
 
-此版本为window多线程测试版本，请不要与生产环境
+此版本为window多线程测试版本，请不要用于生产环境
 
 安装
 ==============
@@ -29,5 +29,7 @@ pthreads2.0.9 for php5.6 下载链接： [http://windows.php.net/downloads/pecl/
 ======
   * 启动后看到一个终端界面，按ctrl+c停止服务；或者点击右上角关闭图标停止服务
 
-
+说明
+======
+workerman windows多线程版本接口上与linux多进程版本是兼容的，一般来说在windows版本上开发的程序也可以在linux多进程版本中运行。
 
