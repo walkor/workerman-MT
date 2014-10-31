@@ -11,10 +11,14 @@ workerman windows 版本
 ## 1、要求php为多线程安全版本，标有Thread Safe的版本
 PHP5.6线程安全版本下载链接：[http://windows.php.net/downloads/releases/php-5.6.2-Win32-VC11-x86.zip](http://windows.php.net/downloads/releases/php-5.6.2-Win32-VC11-x86.zip)   
 
-## 需要安装pthreads扩展
+## 2、需要安装pthreads扩展
 pthreads2.0.9 for php5.6 下载链接： [http://windows.php.net/downloads/pecl/releases/pthreads/2.0.9/php_pthreads-2.0.9-5.6-ts-vc11-x64.zip](http://windows.php.net/downloads/pecl/releases/pthreads/2.0.9/php_pthreads-2.0.9-5.6-ts-vc11-x64.zip)  
 
-安装方法见下载包中的readme，需要拷贝两个文件
+安装方法见下载包中的readme，需要拷贝两个文件，设置以下php.ini加入pthreads扩展
+
+## 3、设置php的环境变量
+将下载的php放到环境变量里面
+
 
 ## 其它相关链接
   * [PHP其它版本链接](http://windows.php.net/download/)
@@ -22,7 +26,6 @@ pthreads2.0.9 for php5.6 下载链接： [http://windows.php.net/downloads/pecl/
 
 启动
 =======
-  * 首先需要设置php的环境变量
   * 打开workerman-for-wi的文件夹，双击start.bat 即可启动
 
 停止
