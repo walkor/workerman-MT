@@ -26,7 +26,7 @@ pthreads2.0.9 for php5.6 下载链接： [http://windows.php.net/downloads/pecl/
 
 启动
 =======
-  * 打开workerman-for-wi的文件夹，双击start.bat 即可启动
+  * 打开workerman-for-win的文件夹，双击start.bat 即可启动
 
 停止
 ======
