@@ -12,7 +12,7 @@ workerman windows 版本
 PHP5.6线程安全版本下载链接：[http://windows.php.net/downloads/releases/php-5.6.2-Win32-VC11-x86.zip](http://windows.php.net/downloads/releases/php-5.6.2-Win32-VC11-x86.zip)   
 
 ## 2、需要安装pthreads扩展
-pthreads2.0.9 for php5.6 下载链接： [http://windows.php.net/downloads/pecl/releases/pthreads/2.0.9/php_pthreads-2.0.9-5.6-ts-vc11-x64.zip](http://windows.php.net/downloads/pecl/releases/pthreads/2.0.9/php_pthreads-2.0.9-5.6-ts-vc11-x64.zip)  
+pthreads2.0.9 for php5.6 下载链接： [http://windows.php.net/downloads/pecl/releases/pthreads/2.0.9/php_pthreads-2.0.9-5.6-ts-vc11-x86.zip](http://windows.php.net/downloads/pecl/releases/pthreads/2.0.9/php_pthreads-2.0.9-5.6-ts-vc11-x86.zip)  
 
 安装方法见下载包中的readme，需要拷贝两个文件，设置以下php.ini加入pthreads扩展
 
