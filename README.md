@@ -16,10 +16,6 @@ pthreads2.0.9 for php5.6 下载链接： [http://windows.php.net/downloads/pecl/
 ## 2、设置php.ini，开启sockets、pthreads扩展
 ![设置php.ini](http://www.workerman.net/img/gif/php-ini-config.gif)
 
-## 3、下载workerman-for-win并启动
-![启动workerman-for-win](http://www.workerman.net/img/gif/run-todpole-for-win.gif)
-
-
 ## 其它相关链接
   * [PHP其它版本链接](http://windows.php.net/download/)
   * [pthreads其它版本链接](http://windows.php.net/downloads/pecl/releases/pthreads/)
