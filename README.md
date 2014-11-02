@@ -1,10 +1,6 @@
-workerman-for-win
+workerman-MT
 =================
-
-workerman windows 版本
-
-
-此版本为window多线程测试版本，请不要用于生产环境
+workerman-MT，即workerman多线程版本。支持windows平台。
 
 安装
 ==============
@@ -18,7 +14,7 @@ pthreads下载下载页面： [http://windows.php.net/downloads/pecl/releases/pt
 
 启动
 =======
-  * 打开workerman-for-win的文件夹，双击start.bat 即可启动
+  * 打开workerman-MT的文件夹，双击start.bat 即可启动
 
 停止
 ======
@@ -26,5 +22,5 @@ pthreads下载下载页面： [http://windows.php.net/downloads/pecl/releases/pt
 
 说明
 ======
-workerman windows多线程版本接口上与linux多进程版本是兼容的，一般来说在windows版本上开发的程序也可以在linux多进程版本中运行。  
+workerman-MT多线程版本接口上与workerman linux多进程版本是兼容的，一般来说在workerman-MT版本上开发的程序也可以在workerman linux多进程版本中运行。  
 下载pthreads扩展时，注意扩展与你的php版本一致，并且与你系统的位数一致（32位系统为x86；64位系统为x64）
