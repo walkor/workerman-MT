@@ -13,7 +13,6 @@ require_once WORKERMAN_ROOT_DIR . 'Core/Lib/Mutex.php';
 require_once WORKERMAN_ROOT_DIR . 'Core/Lib/Log.php';
 require_once WORKERMAN_ROOT_DIR . 'Core/Events/Select.php';
 require_once WORKERMAN_ROOT_DIR . 'Core/SocketWorker.php';
-require_once WORKERMAN_ROOT_DIR . 'Core/ThreadWorker.php';
 
 /**
  * 
@@ -226,7 +225,7 @@ class Master
      */
     protected static function createWorkers()
     {
-        
+        require_once WORKERMAN_ROOT_DIR . 'Core/ThreadWorker.php';
         $workers = Lib\Config::getAllWorkers();
         foreach($workers as $worker_name=>$config)
         {
@@ -235,7 +234,6 @@ class Master
             self::$threads[$worker_name] = new \Pool($config['start_workers'], '\Man\Core\Worker', array($main_socket, $worker_file, $worker_name));
             for($i=0; $i<$config['start_workers'];$i++)
             {
-                //self::$threads[$worker_name]->submit(new ThreadWorker($main_socket, $worker_file, $worker_name));
                 self::$threads[$worker_name]->submit(new ThreadWorker());
             }
         }
