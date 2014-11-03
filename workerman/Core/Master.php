@@ -36,7 +36,7 @@ class Master
      * 版本
      * @var string
      */
-    const VERSION = '2.0.4-for-win';
+    const VERSION = '2.1.4-mt';
     
     /**
      * 服务名
