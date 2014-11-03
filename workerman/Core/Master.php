@@ -161,6 +161,9 @@ class Master
         // 检查log目录是否可读
         Lib\Log::init();
         
+        // 检查扩展
+        Lib\Checker::checkExtension();
+        
         // 检查配置和语法错误等
         Lib\Checker::checkWorkersConfig();
     }
