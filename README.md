@@ -1,3 +1,5 @@
+#<此版本已经不再维护>
+
 workerman-MT
 =================
 workerman-MT，即workerman多线程版本。支持windows平台。
